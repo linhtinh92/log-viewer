@@ -10,5 +10,5 @@ This will download the module.
 
 This is the recommended way if you wish to customise the views, etc.
 ### Composer
-`composer require asgardcms/contact`
+`composer require linhdev92/logviewer`
 
