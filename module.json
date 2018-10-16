@@ -1,0 +1,18 @@
+{
+    "name": "Logviewer",
+    "alias": "logviewer",
+    "description": "",
+    "keywords": [],
+    "version": "1.0.0",
+	"active": 1,
+    "order": 20,
+    "providers": [
+        "Modules\\Logviewer\\Providers\\LogviewerServiceProvider",
+        "Modules\\Logviewer\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

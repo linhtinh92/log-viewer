@@ -1,0 +1,43 @@
+{
+  "name": "linhdev92/logviewer",
+  "description": "",
+  "type": "asgard-module",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0",
+    "composer/installers": "~1.0",
+    "idavoll/core-module": "~3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "3.5.*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Logviewer\\": ".",
+      "Modules\\": "Modules/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Linh Nguyen",
+      "email": "linhdev92@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Modules\\Logviewer\\Providers\\LogviewerServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\Logviewer\\": ""
+    }
+  }
+}
