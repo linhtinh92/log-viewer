@@ -12,8 +12,19 @@ return [
     ],
     'button' => [
         'create logviewer' => 'Create a log viewer',
+        'download file' => 'Download file',
+        'clean file' => 'Clean file',
+        'delete file' => 'Delete file',
+        'delete all files' => 'Delete all files',
     ],
     'table' => [
+        'heading' => [
+            'level' => 'Level',
+            'context' => 'Context',
+            'date' => 'Date',
+            'line number' => 'Line number',
+            'content' => 'Content',
+        ],
     ],
     'form' => [
     ],

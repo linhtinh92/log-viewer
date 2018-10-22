@@ -53,13 +53,13 @@
                                     <thead>
                                     <tr>
                                         @if ($data_logs['standardFormat'])
-                                            <th>Level</th>
-                                            <th>Context</th>
-                                            <th>Date</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.level')</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.context')</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.date')</th>
                                         @else
-                                            <th>Line number</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.line number')</th>
                                         @endif
-                                        <th>Content</th>
+                                        <th>@lang('logviewer::logviewers.table.heading.content')</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -91,13 +91,13 @@
                                     <tfoot>
                                     <tr>
                                         @if ($data_logs['standardFormat'])
-                                            <th>Level</th>
-                                            <th>Context</th>
-                                            <th>Date</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.level')</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.context')</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.date')</th>
                                         @else
-                                            <th>Line number</th>
+                                            <th>@lang('logviewer::logviewers.table.heading.line number')</th>
                                         @endif
-                                        <th>Content</th>
+                                        <th>@lang('logviewer::logviewers.table.heading.content')</th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -109,23 +109,23 @@
                             <div class="p-3">
                                 @if($data_logs['current_file'])
                                     <a href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
-                                        <span class="fa fa-download"></span> Download file
+                                        <span class="fa fa-download"></span> @lang('logviewer::logviewers.button.download file')
                                     </a>
                                     |
                                     <a id="clean-log"
                                        href="?clean={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
-                                        <span class="fa fa-eraser"></span> Clean file
+                                        <span class="fa fa-eraser"></span> @lang('logviewer::logviewers.button.clean file')
                                     </a>
                                     |
                                     <a id="delete-log"
                                        href="?del={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
-                                        <span class="fa fa-trash"></span> Delete file
+                                        <span class="fa fa-trash"></span> @lang('logviewer::logviewers.button.delete file')
                                     </a>
                                     @if(count($data_logs['files']) > 1)
                                         |
                                         <a id="delete-all-log"
                                            href="?delall=true{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
-                                            <span class="fa fa-trash-alt"></span> Delete all files
+                                            <span class="fa fa-trash-alt"></span> @lang('logviewer::logviewers.button.delete all files')
                                         </a>
                                     @endif
                                 @endif
