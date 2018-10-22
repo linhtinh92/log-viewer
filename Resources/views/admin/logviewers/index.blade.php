@@ -88,7 +88,7 @@
                                     <?php endforeach; ?>
                                     <?php endif; ?>
                                     </tbody>
-                                    <thead>
+                                    <tfoot>
                                     <tr>
                                         @if ($data_logs['standardFormat'])
                                             <th>Level</th>
@@ -99,7 +99,7 @@
                                         @endif
                                         <th>Content</th>
                                     </tr>
-                                    </thead>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
