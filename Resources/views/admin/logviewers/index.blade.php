@@ -108,7 +108,7 @@
                         <div class="col-md-12">
                             <div class="p-3">
                                 @if($data_logs['current_file'])
-                                    <a href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
+                                    <a download href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
                                         <span class="fa fa-download"></span> Download file
                                     </a>
                                     |
