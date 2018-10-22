@@ -12,3 +12,6 @@ This is the recommended way if you wish to customise the views, etc.
 ### Composer
 `composer require linhdev92/logviewer`
 
+## Screenshot
+
+![Logviewer Screenshot](screenshot.png)
