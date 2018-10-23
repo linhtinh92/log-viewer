@@ -5,7 +5,7 @@
     "keywords": [],
     "version": "1.0.0",
 	"active": 1,
-    "order": 20,
+    "order": 1,
     "providers": [
         "Modules\\Logviewer\\Providers\\LogviewerServiceProvider",
         "Modules\\Logviewer\\Providers\\RouteServiceProvider"
