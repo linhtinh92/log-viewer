@@ -30,7 +30,7 @@
                                         @if ($data_logs['current_folder'] == $folder)
                                             <div class="list-group folder">
                                                 @foreach($folder_files as $file)
-                                                    <a href="?file={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}&folder={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}"
+                                                    <a href="{{route('admin.logviewer.logviewer.index')}}?file={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}&folder={{ \Illuminate\Support\Facades\Crypt::encrypt($folder) }}"
                                                        class="list-group-item @if ($data_logs['current_file'] == $file) label-danger @endif">
                                                         {{$file}}
                                                     </a>
@@ -40,7 +40,7 @@
                                     </div>
                                 @endforeach
                                 @foreach($data_logs['files'] as $file)
-                                    <a href="?file={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
+                                    <a href="{{route('admin.logviewer.logviewer.index')}}?file={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
                                        class="list-group-item @if ($data_logs['current_file'] == $file) label-danger @endif">
                                         {{$file}}
                                     </a>
@@ -108,23 +108,23 @@
                         <div class="col-md-12">
                             <div class="p-3">
                                 @if($data_logs['current_file'])
-                                    <a download href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
+                                    <a download href="{{route('admin.logviewer.logviewer.index')}}?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
                                         <span class="fa fa-download"></span> @lang('logviewer::logviewers.button.download file')
                                     </a>
                                     |
                                     <a id="clean-log"
-                                       href="?clean={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
+                                       href="{{route('admin.logviewer.logviewer.index')}}?clean={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
                                         <span class="fa fa-eraser"></span> @lang('logviewer::logviewers.button.clean file')
                                     </a>
                                     |
                                     <a id="delete-log"
-                                       href="?del={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
+                                       href="{{route('admin.logviewer.logviewer.index')}}?del={{ \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_file']) }}{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
                                         <span class="fa fa-trash"></span> @lang('logviewer::logviewers.button.delete file')
                                     </a>
                                     @if(count($data_logs['files']) > 1)
                                         |
                                         <a id="delete-all-log"
-                                           href="?delall=true{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
+                                           href="{{route('admin.logviewer.logviewer.index')}}?delall=true{{ ($data_logs['current_folder']) ? '&f=' . \Illuminate\Support\Facades\Crypt::encrypt($data_logs['current_folder']) : '' }}">
                                             <span class="fa fa-trash-alt"></span> @lang('logviewer::logviewers.button.delete all files')
                                         </a>
                                     @endif
