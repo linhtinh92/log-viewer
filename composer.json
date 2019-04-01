@@ -1,12 +1,19 @@
 {
   "name": "linhdev92/logviewer",
-  "description": "",
+  "description": "A Log Viewer modules for Asgardcms",
+  "keywords": [
+        "log viewer",
+        "module asgard",
+        "log viewer for asgardcms",
+        "laravel module",
+        "log viewer module"
+    ],
   "type": "asgard-module",
   "license": "MIT",
   "require": {
-    "php": ">=7.0.0",
+    "php": "^7.1.3",
     "composer/installers": "~1.0",
-    "idavoll/core-module": "~3.0"
+    "idavoll/core-module": "~4.*"
   },
   "require-dev": {
     "phpunit/phpunit": "~6.0",
