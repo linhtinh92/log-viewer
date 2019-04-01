@@ -1,6 +1,13 @@
 {
   "name": "linhdev92/logviewer",
-  "description": "",
+  "description": "A Log Viewer modules for Asgardcms",
+  "keywords": [
+        "log viewer",
+        "module asgard",
+        "log viewer for asgardcms",
+        "laravel module",
+        "log viewer module"
+    ],
   "type": "asgard-module",
   "license": "MIT",
   "require": {
